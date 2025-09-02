@@ -80,6 +80,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 // *** start ***
 // On first load, show home view
+var randomCategoryShortName = "";
+var randomIndex = Math.floor(Math.random() * categories.length);
+randomCategoryShortName = "'" + categories[randomIndex].short_name + "'";
+
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
